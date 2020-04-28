@@ -1,0 +1,3 @@
+[submodule "stargan"]
+	path = stargan
+	url = https://github.com/yunjey/stargan
