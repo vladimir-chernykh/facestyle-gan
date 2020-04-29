@@ -1,6 +1,8 @@
 #!/bin/bash
 
-cd stargan || exit
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+
+cd "$DIR"/../stargan || exit
 
 if [ ! -d "./data/celeba" ]; then
   chmod +x download.sh
