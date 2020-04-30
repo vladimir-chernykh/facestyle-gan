@@ -45,6 +45,8 @@ Below is the training curves for the Generator part of the network.
 
 The full training tensorboard logs can be found in [results/logs](./results/logs) folder.
 
+[**TRAINING EVOLUTION VIDEO**](https://www.dropbox.com/s/qlla0ybwe5h4wbu/evolution.mp4?dl=0)
+
 # Inference
 
 To run the trained model one should first **download** them. To do so please execute:
