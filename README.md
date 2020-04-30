@@ -47,7 +47,10 @@ The full training tensorboard logs can be found in [results/logs](./results/logs
 
 # Inference
 
-To run the trained model one should first download them. To do so please run:
+To run the trained model one should first **download** them. To do so please execute:
 ```bash
 ./scripts/get_models.sh
 ```
+I will download model weights for both **generator and discriminator** parts of the model.
+
+After that feel free to play with the [`Inference`](./notebooks/02_Inference.ipynb) notebook to see how the **inference** should be done on the trained models and what are the capabilities of the model.
