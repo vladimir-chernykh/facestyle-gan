@@ -54,3 +54,9 @@ To run the trained model one should first **download** them. To do so please exe
 I will download model weights for both **generator and discriminator** parts of the model.
 
 After that feel free to play with the [`Inference`](./notebooks/02_Inference.ipynb) notebook to see how the **inference** should be done on the trained models and what are the capabilities of the model.
+
+# Convert to Mobile iOS
+
+I also provide a code to convert the trained model to the Apple ML models format **mlmodel**. It allows to run the model on all the Apple devices running one of the following systems: iOS, OSX, watchOS, tvOS. It include **iPhone** and Macbook.
+
+[`ConversionToMobileIOS`](./notebooks/03_ConversionToMobileIOS.ipynb) shows how the models are converted. Please note that inference via *mlmodel* format (which is the part of the notebook) is possible only on Mac laptops/desktops.
