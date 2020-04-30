@@ -51,9 +51,13 @@ To run the trained model one should first **download** them. To do so please exe
 ```bash
 ./scripts/get_models.sh
 ```
-I will download model weights for both **generator and discriminator** parts of the model.
+It will download model weights for both **generator and discriminator** parts of the model.
 
 After that feel free to play with the [`Inference`](./notebooks/02_Inference.ipynb) notebook to see how the **inference** should be done on the trained models and what are the capabilities of the model.
+
+Below is the image with inference examples. Each columns corresponds to one of the styles applied (first column is the original image).
+
+![grid of inference examples](results/grid.jpg?raw=true)
 
 # Convert to Mobile iOS
 
