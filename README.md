@@ -16,3 +16,7 @@ Available features are:
 * Receding Hairline
 * Straight Hair
 * Wavy Hair
+
+# Training
+
+[**CelebA**](http://mmlab.ie.cuhk.edu.hk/projects/CelebA.html) dataset is used for training. I use aligned and cropped version of images. Each image has the size of 178x218 and face in all of them is in the center and of approximately the same size. For more detailed data exploration please look at [`DataExploration`](./notebooks/01_DataExploration.ipynb) notebook.
