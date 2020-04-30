@@ -44,3 +44,10 @@ Below is the training curves for the Generator part of the network.
 ![training curves](results/loss_graphs.jpg?raw=true)
 
 The full training tensorboard logs can be found in [results/logs](./results/logs) folder.
+
+# Inference
+
+To run the trained model one should first download them. To do so please run:
+```bash
+./scripts/get_models.sh
+```
