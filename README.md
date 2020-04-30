@@ -25,6 +25,10 @@ All the training/inference/notebooks are recommended to be run using the provide
 ```bash
 docker build -f Dockerfile -t hairstyle .
 ```
+To run the container:
+```bash
+docker run -d -p 8888:8888 -v /YOUR/PATH/TO/REPO:/workspace hairstyle
+```
 By default the container is launched with the Jupyter notebook running at port 8888.
 
 Note that the all the code supports **GPU** computations and Docker container should be [launched correspondingly](https://github.com/NVIDIA/nvidia-docker/wiki/Installation-(Native-GPU-Support)) to be able to benefit from it.
