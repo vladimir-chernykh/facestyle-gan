@@ -17,6 +17,16 @@ Available features are:
 * Straight Hair
 * Wavy Hair
 
+# Environment
+
+All the training/inference/notebooks are recommended to be run using the provided **Docker** image ([`Dockerfile`](./Dockerfile)). For more info on how to install and use Docker see the [official docs](https://docs.docker.com). To build the Docker image from this repo execute:
+```bash
+docker build -f Dockerfile -t hairstyle .
+```
+By default the container is launched with the Jupyter notebook running at port 8888.
+
+Note that the all the code supports **GPU** computations and Docker container should be [launched correspondingly](https://github.com/NVIDIA/nvidia-docker/wiki/Installation-(Native-GPU-Support)) to be able to benefit from it.
+
 # Training
 
 [**CelebA**](http://mmlab.ie.cuhk.edu.hk/projects/CelebA.html) dataset is used for training. I use aligned and cropped version of images. Each image has the size of 178x218 and face in all of them is in the center and of approximately the same size. For more detailed preliminary data anaylsis please look at [`DataExploration`](./notebooks/01_DataExploration.ipynb) notebook.
@@ -26,3 +36,5 @@ To train the model I used one NVIDIA K-80 GPU and it took ~48 hours. To repeat t
 ./scripts/train.sh
 ```
 It will first download the CelebA dataset and then start the training procedure in the background.
+
+I highly recommend running the training procedure using the provided Docker image.
