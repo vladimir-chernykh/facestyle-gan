@@ -73,7 +73,7 @@ The full training tensorboard logs for each model can be found in `logs` subfold
 **TRAINING EVOLUTION VIDEOS ARE AVAILABLE**:
 * [Mouth](https://www.dropbox.com/s/ti3ck7cdul4gnah/evolution.mp4?dl=0)
 * [Eyes](https://www.dropbox.com/s/3b24tmk5kajqw6o/evolution.mp4?dl=0)
-* [Nose](https://www.dropbox.com/s/3b24tmk5kajqw6o/evolution.mp4?dl=0)
+* [Nose](https://www.dropbox.com/s/zzgxyov8kqfvrp0/evolution.mp4?dl=0)
 * [Hair](https://www.dropbox.com/s/qlla0ybwe5h4wbu/evolution.mp4?dl=0)
 
 # Inference
