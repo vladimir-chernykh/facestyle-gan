@@ -56,9 +56,9 @@ Note that the all the code supports **GPU** computations and Docker container sh
 
 [**CelebA**](http://mmlab.ie.cuhk.edu.hk/projects/CelebA.html) dataset is used for training. I use aligned and cropped version of images. Each image has the size of 178x218 and face in all of them is in the center and of approximately the same size. For more detailed preliminary data anaylsis please look at [`DataExploration`](./notebooks/01_DataExploration.ipynb) notebook.
 
-To train the model I used one NVIDIA **K-80 GPU** and it took ~48 hours. To repeat the training procedure please run
+To train the model I used one NVIDIA **K-80 GPU** and it took ~48 hours. To repeat the training procedure please run the following script (the name of the face part might be one of `eyes`, `mouth`, `nose`, `hair`):
 ```bash
-./scripts/train.sh
+./scripts/train.sh eyes
 ```
 It will first download the CelebA dataset and then start the training procedure in the background. The progress is tracked and save in the format of **Tensorboard logs**.
 
@@ -68,7 +68,7 @@ Below is the training curves for the Generator part of the network.
 
 ![training curves](results/loss_curves.jpg?raw=true)
 
-The full training tensorboard logs can be found in [results/logs](./results/logs) folder.
+The full training tensorboard logs can be found in corresponding `logs` folder inside [`results`](./results) directory.
 
 [**TRAINING EVOLUTION VIDEO**](https://www.dropbox.com/s/qlla0ybwe5h4wbu/evolution.mp4?dl=0)
 
