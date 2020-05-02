@@ -96,4 +96,4 @@ Below are the links to the image grids with inference examples for each of the m
 
 I also provide a code to convert the trained model to the Apple ML models format **mlmodel**. It allows to run the model on all the Apple devices running one of the following systems: iOS, OSX, watchOS, tvOS. It include **iPhone** and Macbook.
 
-[`ConversionToMobileIOS`](./notebooks/03_ConversionToMobileIOS.ipynb) shows how the models are converted. Please note that inference via *mlmodel* format (which is the part of the notebook) is possible only on Mac laptops/desktops.
+[`ConversionToMobileIOS`](./notebooks/20_ConversionToMobileIOS.ipynb) shows how the models are converted. Please note that inference via *mlmodel* format (which is the part of the notebook) is possible only on Mac laptops/desktops.
