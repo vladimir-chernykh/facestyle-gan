@@ -13,19 +13,19 @@ The model works with **128x128 RGB images** where the face is located in the cen
 ![results image](results/example.jpg?raw=true)
 
 4 face parts are supported and each has its own available features:
-* Mouth
+* **Mouth**
   * Mouth Slightly Open
   * Smiling
-* Eyes
+* **Eyes**
   * Arched Eyebrows
   * Bushy Eyebrows
   * Bags Under Eyes
   * Eyeglasses
   * Narrow Eyes
-* Nose
+* **Nose**
   * Big Nose
   * Pointy Nose
-* Hair
+* **Hair**
   * Black Hair
   * Blond Hair
   * Brown Hair
@@ -66,7 +66,7 @@ I highly recommend running the training procedure using the provided Docker imag
 
 Below is the training curves for the Generator part of the network.
 
-![training curves](results/loss_graphs.jpg?raw=true)
+![training curves](results/loss_curves.jpg?raw=true)
 
 The full training tensorboard logs can be found in [results/logs](./results/logs) folder.
 
