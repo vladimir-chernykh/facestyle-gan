@@ -64,11 +64,11 @@ It will first download the CelebA dataset and then start the training procedure 
 
 I highly recommend running the training procedure using the provided Docker image.
 
-Below is the training curves for the Generator part of the network.
+Below is the training curves for the Generator part of the network for all 4 models.
 
 ![training curves](results/loss_curves.jpg?raw=true)
 
-The full training tensorboard logs can be found in corresponding `logs` folder inside [`results`](./results) directory.
+The full training tensorboard logs for each model can be found in `logs` subfolder of corresponding folder inside [`results`](./results) directory.
 
 [**TRAINING EVOLUTION VIDEO**](https://www.dropbox.com/s/qlla0ybwe5h4wbu/evolution.mp4?dl=0)
 
