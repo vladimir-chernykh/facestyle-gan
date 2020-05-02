@@ -1,6 +1,6 @@
 # Hairstyle GAN
 
-The repo contains the code the the model for **detecting and changing the hairstyle** of the person's headshot. It is based on [StarGANv1](https://arxiv.org/pdf/1711.09020.pdf) and [this implementation](https://github.com/yunjey/stargan) in particular.
+The repo contains the code the the model for **detecting and changing face parts style** of the person's headshot. It is based on [StarGANv1](https://arxiv.org/pdf/1711.09020.pdf) and [this implementation](https://github.com/yunjey/stargan) in particular.
 
 **When cloning the repo please uses `--recursive` tag to clone all the sobmodules as well.**
 
@@ -8,16 +8,29 @@ The repo contains the code the the model for **detecting and changing the hairst
 
 The model works with **128x128 RGB images** where the face is located in the center of the frame and takes the most part of it. One might do the appropriate crop manually or using any face detection model.
 
-Available features are:
-* Black Hair
-* Blond Hair
-* Brown Hair
-* Gray Hair
-* Bald
-* Bangs
-* Receding Hairline
-* Straight Hair
-* Wavy Hair
+4 face parts are supported and each has its own available features:
+* Mouth
+  * Mouth Slightly Open
+  * Smiling
+* Eyes
+  * Arched Eyebrows
+  * Bushy Eyebrows
+  * Bags Under Eyes
+  * Eyeglasses
+  * Narrow Eyes
+* Nose
+  * Big Nose
+  * Pointy Nose
+* Hair
+  * Black Hair
+  * Blond Hair
+  * Brown Hair
+  * Gray Hair
+  * Bald
+  * Bangs
+  * Receding Hairline
+  * Straight Hair
+  * Wavy Hair
 
 # Environment
 
