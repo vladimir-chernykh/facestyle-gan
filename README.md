@@ -84,11 +84,13 @@ To run the trained model one should first **download** them. To do so please exe
 ```
 It will download model weights for both **generator and discriminator** parts of the model.
 
-After that feel free to play with the [`Inference`](./notebooks/02_Inference.ipynb) notebook to see how the **inference** should be done on the trained models and what are the capabilities of the model.
+After that feel free to play with the all the Inference notebook from [`notebooks`](./notebooks) folder to see how the **inference** should be done on the trained models and what are the capabilities of the models.
 
-Below is the image with inference examples. Each columns corresponds to one of the styles applied (first column is the original image).
-
-![grid of inference examples](results/grid.jpg?raw=true)
+Below are the links to the image grids with inference examples for each of the models. Each columns corresponds to one of the styles applied (first column is the original image):
+* [Mouth](./results/celeba_128_mouth/grid.jpg)
+* [Eyes](./results/celeba_128_eyes/grid.jpg)
+* [Nose](./results/celeba_128_nose/grid.jpg)
+* [Hair](./results/celeba_128_hair/grid.jpg)
 
 # Convert to Mobile iOS
 
