@@ -2,7 +2,7 @@
 .idea
 .DS_Store
 models/celeba*
-results/evolution.mp4
+evolution.mp4
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
