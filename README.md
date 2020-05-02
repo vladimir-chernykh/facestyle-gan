@@ -1,23 +1,42 @@
-# Hairstyle GAN
+# Facestyle GAN
 
-The repo contains the code the the model for **detecting and changing the hairstyle** of the person's headshot. It is based on [StarGANv1](https://arxiv.org/pdf/1711.09020.pdf) and [this implementation](https://github.com/yunjey/stargan) in particular.
+The repo contains the code the the model for **detecting and changing face parts style** of the person's headshot.
 
 **When cloning the repo please uses `--recursive` tag to clone all the sobmodules as well.**
 
-![results image](results/example.jpg?raw=true)
+# Algorithm
+
+The algorithm is based on [StarGANv1](https://arxiv.org/pdf/1711.09020.pdf) and [this implementation](https://github.com/yunjey/stargan) in particular.
 
 The model works with **128x128 RGB images** where the face is located in the center of the frame and takes the most part of it. One might do the appropriate crop manually or using any face detection model.
 
-Available features are:
-* Black Hair
-* Blond Hair
-* Brown Hair
-* Gray Hair
-* Bald
-* Bangs
-* Receding Hairline
-* Straight Hair
-* Wavy Hair
+![results image](results/example.jpg?raw=true)
+
+4 face parts are supported and each has its own available features:
+* **Mouth**
+  * Mouth Slightly Open
+  * Smiling
+* **Eyes**
+  * Arched Eyebrows
+  * Bushy Eyebrows
+  * Bags Under Eyes
+  * Eyeglasses
+  * Narrow Eyes
+* **Nose**
+  * Big Nose
+  * Pointy Nose
+* **Hair**
+  * Black Hair
+  * Blond Hair
+  * Brown Hair
+  * Gray Hair
+  * Bald
+  * Bangs
+  * Receding Hairline
+  * Straight Hair
+  * Wavy Hair
+
+Note that each face part is modified with its own separate model.
 
 # Environment
 
@@ -35,23 +54,27 @@ Note that the all the code supports **GPU** computations and Docker container sh
 
 # Training
 
-[**CelebA**](http://mmlab.ie.cuhk.edu.hk/projects/CelebA.html) dataset is used for training. I use aligned and cropped version of images. Each image has the size of 178x218 and face in all of them is in the center and of approximately the same size. For more detailed preliminary data anaylsis please look at [`DataExploration`](./notebooks/01_DataExploration.ipynb) notebook.
+[**CelebA**](http://mmlab.ie.cuhk.edu.hk/projects/CelebA.html) dataset is used for training. I use aligned and cropped version of images. Each image has the size of 178x218 and face in all of them is in the center and of approximately the same size. For more detailed preliminary data anaylsis please look at [`DataExploration`](./notebooks/00_DataExploration.ipynb) notebook.
 
-To train the model I used one NVIDIA **K-80 GPU** and it took ~48 hours. To repeat the training procedure please run
+To train the model I used one NVIDIA **K-80 GPU** and it took ~48 hours. To repeat the training procedure please run the following script (the name of the face part might be one of `eyes`, `mouth`, `nose`, `hair`):
 ```bash
-./scripts/train.sh
+./scripts/train.sh eyes
 ```
 It will first download the CelebA dataset and then start the training procedure in the background. The progress is tracked and save in the format of **Tensorboard logs**.
 
 I highly recommend running the training procedure using the provided Docker image.
 
-Below is the training curves for the Generator part of the network.
+Below is the training curves for the Generator part of the network for all 4 models.
 
-![training curves](results/loss_graphs.jpg?raw=true)
+![training curves](results/loss_curves.jpg?raw=true)
 
-The full training tensorboard logs can be found in [results/logs](./results/logs) folder.
+The full training tensorboard logs for each model can be found in `logs` subfolder of corresponding folder inside [`results`](./results) directory.
 
-[**TRAINING EVOLUTION VIDEO**](https://www.dropbox.com/s/qlla0ybwe5h4wbu/evolution.mp4?dl=0)
+**TRAINING EVOLUTION VIDEOS ARE AVAILABLE**:
+* [Mouth](https://www.dropbox.com/s/ti3ck7cdul4gnah/evolution.mp4?dl=0)
+* [Eyes](https://www.dropbox.com/s/3b24tmk5kajqw6o/evolution.mp4?dl=0)
+* [Nose](https://www.dropbox.com/s/zzgxyov8kqfvrp0/evolution.mp4?dl=0)
+* [Hair](https://www.dropbox.com/s/qlla0ybwe5h4wbu/evolution.mp4?dl=0)
 
 # Inference
 
