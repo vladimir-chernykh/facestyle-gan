@@ -70,7 +70,11 @@ Below is the training curves for the Generator part of the network for all 4 mod
 
 The full training tensorboard logs for each model can be found in `logs` subfolder of corresponding folder inside [`results`](./results) directory.
 
-[**TRAINING EVOLUTION VIDEO**](https://www.dropbox.com/s/qlla0ybwe5h4wbu/evolution.mp4?dl=0)
+**TRAINING EVOLUTION VIDEOS ARE AVAILABLE**:
+* [Mouth](https://www.dropbox.com/s/ti3ck7cdul4gnah/evolution.mp4?dl=0)
+* [Eyes](https://www.dropbox.com/s/3b24tmk5kajqw6o/evolution.mp4?dl=0)
+* [Nose](https://www.dropbox.com/s/3b24tmk5kajqw6o/evolution.mp4?dl=0)
+* [Hair](https://www.dropbox.com/s/qlla0ybwe5h4wbu/evolution.mp4?dl=0)
 
 # Inference
 
