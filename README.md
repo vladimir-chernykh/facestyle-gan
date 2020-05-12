@@ -54,13 +54,13 @@ Note that the all the code supports **GPU** computations and Docker container sh
 
 # Training
 
-[**CelebA**](http://mmlab.ie.cuhk.edu.hk/projects/CelebA.html) dataset is used for training. I use aligned and cropped version of images. Each image has the size of 178x218 and face in all of them is in the center and of approximately the same size. For more detailed preliminary data anaylsis please look at [`DataExploration`](./notebooks/00_DataExploration.ipynb) notebook.
+[**CelebA**](http://mmlab.ie.cuhk.edu.hk/projects/CelebA.html) dataset is used for training. Aligned and cropped version of images are used. Each image has the size of 178x218 and the face is located in the center of the frame. All the faces have approximately the same size. For more detailed preliminary data anaylsis please look at [`DataExploration`](./notebooks/00_DataExploration.ipynb) notebook.
 
-To train the model I used one NVIDIA **K-80 GPU** and it took ~48 hours. To repeat the training procedure please run the following script (the name of the face part might be one of `eyes`, `mouth`, `nose`, `hair`):
+To train the model I used one NVIDIA **K-80 GPU** and it took ~48 hours. To repeat the training procedure please run the following script (the name of the face part might be one of the `eyes`, `mouth`, `nose`, `hair`):
 ```bash
 ./scripts/train.sh eyes
 ```
-It will first download the CelebA dataset and then start the training procedure in the background. The progress is tracked and save in the format of **Tensorboard logs**.
+It will first download the CelebA dataset and then start the training procedure in the background. The progress is tracked and saved in the format of **Tensorboard logs**.
 
 I highly recommend running the training procedure using the provided Docker image.
 
@@ -68,7 +68,7 @@ Below is the training curves for the Generator part of the network for all 4 mod
 
 ![training curves](results/loss_curves.jpg?raw=true)
 
-The full training tensorboard logs for each model can be found in `logs` subfolder of corresponding folder inside [`results`](./results) directory.
+The full training tensorboard logs for each of the models can be found in `logs` subfolder of the corresponding folder inside [`results`](./results) directory.
 
 **TRAINING EVOLUTION VIDEOS ARE AVAILABLE**:
 * [Mouth](https://www.dropbox.com/s/ti3ck7cdul4gnah/evolution.mp4?dl=0)
@@ -78,13 +78,13 @@ The full training tensorboard logs for each model can be found in `logs` subfold
 
 # Inference
 
-To run the trained model one should first **download** them. To do so please execute:
+To run the trained model one should first **download** it. To do so please execute:
 ```bash
 ./scripts/get_models.sh
 ```
 It will download model weights for both **generator and discriminator** parts of the model.
 
-After that feel free to play with the all the Inference notebook from [`notebooks`](./notebooks) folder to see how the **inference** should be done on the trained models and what are the capabilities of the models.
+After that feel free to play with the all the Inference notebooks from [`notebooks`](./notebooks) folder to see how the **inference** should be done on the trained models and what are the capabilities of the models.
 
 Below are the links to the image grids with inference examples for each of the models. Each columns corresponds to one of the styles applied (first column is the original image):
 * [Mouth](./results/celeba_128_mouth/grid.jpg)
@@ -94,6 +94,6 @@ Below are the links to the image grids with inference examples for each of the m
 
 # Convert to Mobile iOS
 
-I also provide a code to convert the trained model to the Apple ML models format **mlmodel**. It allows to run the model on all the Apple devices running one of the following systems: iOS, OSX, watchOS, tvOS. It include **iPhone** and Macbook.
+I also provide a code to convert the trained model to the Apple Machine Learning models format **mlmodel**. It allows to run the model on all Apple devices running one of the following systems: iOS, OSX, watchOS, tvOS. It includes **iPhone** and Macbook.
 
-[`ConversionToMobileIOS`](./notebooks/20_ConversionToMobileIOS.ipynb) shows how the models are converted. Please note that inference via *mlmodel* format (which is the part of the notebook) is possible only on Mac laptops/desktops.
+[`ConversionToMobileIOS`](./notebooks/20_ConversionToMobileIOS.ipynb) shows how the models are converted. Please note that the inference via *mlmodel* format (which is the part of the notebook) is possible only on Mac laptops/desktops.
